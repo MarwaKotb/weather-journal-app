@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 // Cors for cross origin allowance
 const cors = require('cors');
 app.use(cors());
-// Initialize the main project folder
+// Initialize the main project folder  and define port number
 app.use(express.static('website'));
 const port = 3000;
 

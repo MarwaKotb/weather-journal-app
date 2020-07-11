@@ -2,7 +2,9 @@
 
 // Personal API Key for OpenWeatherMap API
 const baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip='
-const apiKey = 'ad689794caf3e69c1c6d71e58b7d40e8';
+//const apiKey = 'ad689794caf3e69c1c6d71e58b7d40e8';
+const apiKey = 'e32f3d45fe2152245173dcc595b90892';
+
 // Create a new date instance dynamically with JS
 
 const fillURL = ',us&units=metric&APPID=';
@@ -21,7 +23,7 @@ var mm = String(today.getMonth() + 1).padStart(2, '0');
 var yyyy = today.getFullYear();
 
 let newDate = dd + '/' + mm + '/' + yyyy;
-
+//Async function
 const getWeather = async (baseURL, zip, apiKey) =>{
     try {
         const request = await fetch(baseURL+zip+fillURL+apiKey)
@@ -35,9 +37,7 @@ const getWeather = async (baseURL, zip, apiKey) =>{
         throw error
     }
 }
-
-
-// Function to POST data 
+// POST using try fetch
 const postData = async ( url, data)=>{
     try {
       await fetch(url, {
